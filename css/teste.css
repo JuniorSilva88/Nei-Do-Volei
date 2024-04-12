@@ -22,7 +22,6 @@ body, html {
     background: var(--fundo);
     border-radius: 8px ;
  }
- /*Cabeçalho*/
 
 .cabecalho {
     height: 180px;
@@ -37,7 +36,6 @@ body, html {
 .cabecalho-imagem {
     width: 15%;
     height: 120px;
-
 }
 
 .cabecalho-menu {
@@ -57,8 +55,6 @@ body, html {
     border-bottom: 1px solid var(--borda);
     color: var(--hover);    
 }
-
-/* Rodapé*/
 
 .rodape {
     border-top: 1.8px solid var(--borda);
@@ -90,44 +86,6 @@ body, html {
     transform: scale(1.2);    
 }
 
-.copyright {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-}
-
-.desenvolvido-por {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    color: var(--fonte);
-}
-
-.conteudo{
-    color: var(--fonte);
-    background-color: white;
-    text-align: justify;
-    padding: 50px 80px;
-}
-
-.conteudo-principal-paragrafo{
-    color: var(--fonte);
-}
-
-h3 {
-    text-transform: uppercase;
-    color: #111;
-    text-align: center;
-}
-
-p {
-    color: black;
-    font-size: 1.1em;
-}
- 
 /* Efeito Parallax*/
 
 .caixa1, .caixa2, .caixa3, .caixa4, .caixa5 {
@@ -178,4 +136,32 @@ p {
     letter-spacing: 5px;
     border-radius: 12px;
     box-shadow: 0.75px 1.25px;
+}
+
+/* Media query para telas pequenas (Smartphones) */
+@media screen and (max-width: 576px) {
+    .conteudo {
+        padding: 30px 20px; /* Ajuste o espaçamento conforme necessário */
+    }
+}
+
+/* Media query para telas médias (Tablets) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .conteudo {
+        padding: 50px 80px; /* Ajuste o espaçamento conforme necessário */
+    }
+}
+
+/* Media query para telas grandes (Computadores) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .conteudo {
+        padding: 70px 100px; /* Ajuste o espaçamento conforme necessário */
+    }
+}
+
+/* Media query para telas extra grandes (TVs e monitores grandes) */
+@media screen and (min-width: 1201px) {
+    .conteudo {
+        padding: 90px 120px; /* Ajuste o espaçamento conforme necessário */
+    }
 }
