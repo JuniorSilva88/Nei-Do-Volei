@@ -8,6 +8,11 @@
     --borda:  #36987f;
     --sombra: #3a415a;
     --fonte:  #34344e;
+    --color1: #3e5891 ;
+    --color2: #35749e ;
+    --color3: #a7afc1 ;
+    --color4: #5d81ba ;
+    --color5: #53f4e6 ;
 }
 
 /* Cofiguração padrão*/
@@ -16,6 +21,7 @@ body, html {
     margin: 0;
     font: 16px "Lato" sans-serif;
     height: 100%;
+    text-align: center;
  }
 
  header, footer {
@@ -58,7 +64,125 @@ body, html {
     color: var(--hover);    
 }
 
-/* Rodapé*/
+footer {
+    width: 100%;
+    color: var(--color5);
+}
+
+#footer_content {
+    background-color: var(--color1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    font-size: 1.30rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    right: 3rem;
+    color: var(--color3);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+    color: var(--color5);    
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none; 
+}
+
+.footer-list .footer-link {
+    color: var(--color3);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: var(--color5);
+} 
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--color3);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color1);
+    border-radius: 4px;
+}
+
+#inút_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: var(--color5);
+    border: none;
+    padding: 0px, 1.25rem;
+    font-size: 1.125rem;
+    right: 100%;
+    border-radius: 0px, 4px, 4px, 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group:hover {
+    opacity: 0.8rem;
+}
+
+#footer_copyright {
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+/* Rodapé
 
 .rodape {
     border-top: 1.8px solid var(--borda);
@@ -146,7 +270,7 @@ p {
 }
 
 .caixa2 {
-    background-image: url(../imagens/imagem1.jpg);
+    background-image: url(../imagens/imagem15.jpeg);
 }
 
 .caixa3 {
@@ -154,7 +278,7 @@ p {
 }
 
 .caixa4 {
-    background-image: url(../imagens/imagem4.jpg);
+    background-image: url(../imagens/imagem15.jpeg);
 }
 
 .caixa5 {
