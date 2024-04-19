@@ -3,17 +3,13 @@
 
 /*Paleta de Cores*/
 :root {
-    --fundo:  #dcebe6;
-    --hover:  #afd4e0;
-    --borda:  #36987f;
-    --sombra: #3a415a;
-    --fonte:  #34344e;
-    --color1: #3e5891 ;
-    --color2: #35749e ;
-    --color3: #a7afc1 ;
-    --color4: #5d81ba ;
-    --color5: #53f4e6 ;
+    --principal: #34495e; /* Azul escuro */
+    --destaque: #2ecc71; /* Verde */
+    --fundo: #ffffff; /* Branco */
+    --detalhes: #95a5a6; /* Cinza */
 }
+
+
 
 /* Cofiguração padrão*/
 
@@ -37,7 +33,7 @@ body, html {
     align-items: center;
     justify-content: space-around;
     padding: 24px;
-    border-bottom: 1.8px solid var(--borda);
+    border-bottom: 1.8px solid ;
 }
 
 .cabecalho-imagem {
@@ -53,24 +49,24 @@ body, html {
 
 .cabecalho-item {
     font-family: 'Roboto Flex', sans-serif;
-    color: var(--fonte);
+    color: var(--principal);
     font-weight: 400;
     font-size: 18px;
     text-decoration: none;
 }
 
 .cabecalho-item:hover {
-    border-bottom: 1px solid var(--borda);
-    color: var(--hover);    
+    border-bottom: 1px solid ;
+    color: var(--destaque);    
 }
 
 footer {
     width: 100%;
-    color: var(--color5);
+    color: var(--principal);
 }
 
 #footer_content {
-    background-color: var(--color1);
+    background-color: var(--fundo);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -96,14 +92,14 @@ footer {
     justify-content: center;
     width: 3rem;
     right: 3rem;
-    color: var(--color3);
+    color: var(--principal);
     border-radius: 50%;
     transition: all 0.4s;
 }
 
 #footer_social_media .footer-link:hover {
     opacity: 0.8;
-    color: var(--color5);    
+    color: var(--destaque);    
 }
 
 .footer-list {
@@ -114,12 +110,12 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: var(--color3);
+    color: var(--detalhes);
     transition: all 0.4s;
 }
 
 .footer-list .footer-link:hover {
-    color: var(--color5);
+    color: var(--destaque);
 } 
 
 #footer_subscribe {
@@ -129,13 +125,13 @@ footer {
 }
 
 #footer_subscribe p {
-    color: var(--color3);
+    color: var(--detalhes);
 }
 
 #input_group {
     display: flex;
     align-items: center;
-    background-color: var(--color1);
+    background-color: var(--fundo);
     border-radius: 4px;
 }
 
@@ -146,7 +142,7 @@ footer {
 }
 
 #input_group button {
-    background-color: var(--color5);
+    background-color: var(--detalhes);
     border: none;
     padding: 0px, 1.25rem;
     font-size: 1.125rem;
@@ -161,11 +157,11 @@ footer {
 }
 
 #footer_copyright {
-    background-color: var(--color2);
+    background-color: var(--destaque);
     display: flex;
     justify-content: center;
-    font-size: 1rem;
-    padding: 1.5rem;
+    font-size: 1.1rem;
+    padding: 1rem;
     font-weight: 100;
 }
 
@@ -181,75 +177,6 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         padding: 3rem 2rem;
     }
-}
-/* Rodapé
-
-.rodape {
-    border-top: 1.8px solid var(--borda);
-    border-bottom: 1.8px solid var(--borda);
-    margin-bottom: 8px;
-    padding: 20px;
-    text-decoration: none;
-    color: var(--fonte);
-}
-
-.redes-sociais {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: end;
-}
-
-.redes-sociais img {
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    border-radius: 50%;
-    box-shadow: 4px 5px 4px var( --sombra);
-}
-
-.redes-sociais img:hover {
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);    
-}
-
-.copyright {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-}
-
-.desenvolvido-por {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    color: var(--fonte);
-}
-
-.conteudo{
-    color: var(--fonte);
-    background-color: white;
-    text-align: justify;
-    padding: 50px 80px;
-}
-
-.conteudo-principal-paragrafo{
-    color: var(--fonte);
-}
-
-h3 {
-    text-transform: uppercase;
-    color: #111;
-    text-align: center;
-}
-
-p {
-    color: black;
-    font-size: 1.1em;
 }
  
 /* Efeito Parallax*/
@@ -295,8 +222,8 @@ p {
 }
 
 .conteudo-titulo span.titulo {
-    color: #fff;
-    background-color: #4d877e;
+    color: var(--fundo);
+    background-color: var(--detalhes);
     padding: 18px;
     font-size: 25px;
     letter-spacing: 5px;
