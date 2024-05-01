@@ -223,7 +223,7 @@ footer {
 
 .conteudo {
     font-size: 20px;
-    padding: 2.75vw;
+    padding: 0vw 5vw 0vw 5vw;
     text-align: justify;
     display: flex;
     flex-direction: column;
