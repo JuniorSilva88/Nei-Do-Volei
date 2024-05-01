@@ -214,7 +214,7 @@ footer {
 .conteudo-titulo span.titulo {
     color: var(--fundo);
     background-color: var(--detalhes);
-    padding: 18px;
+    padding: 10px;
     font-size: 25px;
     letter-spacing: 5px;
     border-radius: 12px;
@@ -222,6 +222,8 @@ footer {
 }
 
 .conteudo {
+    font-size: 20px;
+    padding: 2.75vw;
     text-align: justify;
     display: flex;
     flex-direction: column;
