@@ -13,7 +13,7 @@
 body, html {
     margin: 0;
     font-family: "Roboto Flex", sans-serif;
-    height: 100%;
+    height: auto;
     text-align: center;
 }
 
@@ -26,6 +26,42 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+li {
+    list-style: none;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 90%;
+    min-width: 200px;
+  }
+  
+  .swiper {
+    height: 60%;
+    padding: 5%;
+  }
+  
+  .swiper img {
+    box-shadow: 0 5px 5px rgb(0, 0, 0);
+    width: 30vw;
+    height: 30vw;
+    border-radius: 8px;
+  }
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 450px) {
+    .swiper {
+      height: 270px;
+    }
+  }
 
 /* Cabeçalho */
 .cabecalho {
@@ -89,6 +125,7 @@ img {
 
 /* Footer */
 footer {
+    bottom: 0;
     width: 100%;
     color: var(--principal);
 }
@@ -108,7 +145,7 @@ footer {
 
 #footer_social_media {
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     margin-top: 1.5rem;
 }
 
@@ -153,7 +190,6 @@ footer {
     justify-content: center;
     font-size: 1.1rem;
     padding: 1.2rem;
-    font-weight: 100;
 }
 
 #footer_copyright a:link,
@@ -168,10 +204,10 @@ footer {
 }
 
 /* Efeito Parallax */
-.caixa1,
-.caixa2,
-.caixa3,
-.caixa4,
+.bem-vindo,
+.breve-introducao,
+.apoiamos,
+.venha-conosco,
 .caixa5 {
     position: relative;
     height: 100vh;
@@ -182,20 +218,20 @@ footer {
     box-shadow: 3px 4px 3px;
 }
 
-.caixa1 {
+.bem-vindo {
     background-image: url(../imagens/imagem1.jpg);
 }
 
-.caixa2 {
+.breve-introducao {
     background-image: url(../imagens/imagem8.jpg);
 }
 
-.caixa3 {
+.apoiamos {
     background-image: url(../imagens/imagem15.jpg);
 }
 
-.caixa4 {
-    background-image: url(../imagens/imagem15.jpeg);
+.venha-conosco {
+    background-image: url(../imagens/imagem17.jpg);
 }
 
 .caixa5 {
@@ -233,6 +269,7 @@ footer {
 .conteudo h3,
 .conteudo p {
     max-width: 1400px;
+    text-indent: 50px;
     /* Largura máxima do texto */
 }
 
