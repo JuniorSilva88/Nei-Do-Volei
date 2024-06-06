@@ -77,6 +77,7 @@ main {
 .cabecalho-imagem {
     width: 15%;
     max-height: 90px;
+    color: var(--principal);
 }
 
 .cabecalho-menu {
@@ -219,23 +220,19 @@ footer {
 }
 
 .bem-vindo {
-    background-image: url(../imagens/imagem1.jpg);
+    background-image: url(../imagens/imagem1.jpeg);
 }
 
 .breve-introducao {
-    background-image: url(../imagens/imagem8.jpg);
+    background-image: url(../imagens/imagem8.jpeg);
 }
 
 .apoiamos {
-    background-image: url(../imagens/imagem15.jpg);
+    background-image: url(../imagens/imagem20.jpeg);
 }
 
 .venha-conosco {
-    background-image: url(../imagens/imagem17.jpg);
-}
-
-.caixa5 {
-    background-image: url(../imagens/imagem5.jpg);
+    background-image: url(../imagens/imagem18.jpeg);
 }
 
 .conteudo-titulo {
