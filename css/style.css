@@ -13,7 +13,6 @@
 body, html {
     margin: 0;
     font-family: "Roboto Flex", sans-serif;
-    height: auto;
     text-align: center; /* Centraliza o texto / Centers the text */
 }
 
@@ -39,287 +38,288 @@ main {
     min-width: 200px; /* Largura mínima / Minimum width */
 }
 
+/* Swiper Gallery */
 .swiper {
-    height: 60%; /* Define a altura da galeria de imagens / Sets the height of the image gallery */
-    padding: 5%; /* Define o espaçamento interno / Sets inner padding */
+    height: 60%; /* Altura da galeria de imagens / Image gallery height */
+    padding: 5%; /* Espaçamento interno / Inner padding */
 }
 
+/* Ajuste geral para as imagens dentro do swiper */
 .swiper img {
-    box-shadow: 0 5px 5px rgb(0, 0, 0); /* Adiciona uma sombra às imagens / Adds a shadow to images */
-    width: 30vw; /* Define a largura com base na viewport / Sets width based on the viewport */
-    height: 30vw; /* Define a altura igual à largura / Sets height equal to width */
-    border-radius: 8px; /* Arredonda os cantos / Rounds the corners */
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 5px 5px rgb(0, 0, 0);
+    border-radius: 8px;
 }
 
-.swiper-slide {
-    text-align: center; /* Centraliza o texto / Centers text */
-    display: flex;
-    align-items: center; /* Alinha verticalmente os itens / Vertically aligns items */
-    justify-content: center; /* Centraliza horizontalmente / Horizontally centers */
+/* Media Queries para Swiper Gallery */
+@media (min-width: 1024px) {
+    .swiper img {
+        width: 30vw; /* Ajuste para maior viewport */
+        height: 30vw;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .swiper img {
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper img {
+        width: 60vw;
+        height: 60vw;
+    }
 }
 
 @media (max-width: 450px) {
-    .swiper {
-        height: 270px; /* Ajusta a altura da galeria para telas menores / Adjusts gallery height for smaller screens */
+    .swiper img {
+        width: 80vw;
+        height: 80vw;
     }
+
+    .swiper {
+        height: 270px; /* Ajusta a altura da galeria para telas menores */
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens / Vertically aligns items */
+    justify-content: center; /* Centraliza horizontalmente / Horizontally centers */
 }
 
 /* Cabeçalho / Header */
 .cabecalho {
-    height: 40px; /* Define a altura do cabeçalho / Sets the height of the header */
+    height: 30px;
     display: flex;
-    flex-direction: row; /* Organiza os elementos em linha / Aligns elements in a row */
-    align-items: center; /* Alinha verticalmente os itens / Vertically aligns items */
-    justify-content: space-around; /* Distribui uniformemente os itens / Evenly distributes items */
-    padding: 24px; /* Espaçamento interno do cabeçalho / Padding inside the header */
-    border-bottom: 1.8px solid; /* Adiciona uma borda inferior / Adds a bottom border */
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+    border-bottom: 1.8px solid;
 }
 
 .cabecalho-imagem {
-    width: 15%; /* Define a largura da imagem / Sets the image width */
-    max-height: 90px; /* Altura máxima da imagem / Maximum image height */
-    color: var(--principal); /* Define a cor principal / Sets the main color */
+    width: 15%;
+    max-height: 90px;
+    color: var(--principal);
 }
 
 .cabecalho-menu {
     display: flex;
-    flex-direction: row; /* Alinha os itens do menu em linha / Aligns menu items in a row */
-    gap: 16px; /* Espaçamento entre os itens / Spacing between items */
+    gap: 16px;
 }
 
 .cabecalho-item {
-    font-family: 'Roboto Flex', sans-serif;
-    color: var(--principal); /* Cor do texto / Text color */
-    font-weight: 400; /* Peso da fonte / Font weight */
-    font-size: 18px; /* Tamanho da fonte / Font size */
-    text-decoration: none; /* Remove o sublinhado do link / Removes link underline */
+    color: var(--principal);
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 .cabecalho-item:hover {
-    border-bottom: 1px solid; /* Adiciona borda inferior ao passar o mouse / Adds bottom border on hover */
-    color: var(--destaque); /* Muda a cor ao passar o mouse / Changes color on hover */
+    border-bottom: 1px solid;
+    color: var(--destaque);
 }
 
+/* Dropdown Menu */
 .dropdown-content {
-    display: none; /* Esconde o conteúdo do dropdown / Hides dropdown content */
+    display: none;
     position: absolute;
-    background-color: var(--fundo); /* Define a cor de fundo / Sets the background color */
-    min-width: 160px; /* Largura mínima / Minimum width */
-    z-index: 1; /* Garante que o dropdown fique acima de outros elementos / Ensures dropdown is above other elements */
+    background-color: var(--fundo);
+    min-width: 160px;
+    z-index: 1;
 }
 
 .dropdown-content a {
-    color: var(--principal); /* Define a cor dos links / Sets link color */
-    padding: 12px 16px; /* Define o espaçamento interno dos links / Sets padding inside the links */
-    text-decoration: none; /* Remove o sublinhado dos links / Removes underline from links */
-    display: block; /* Cada link ocupa uma linha inteira / Each link occupies a full line */
+    color: var(--principal);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: var(--fundo); /* Muda a cor de fundo ao passar o mouse / Changes background on hover */
-    border-bottom: 1px solid; /* Adiciona borda inferior ao passar o mouse / Adds bottom border on hover */
-    color: var(--destaque); /* Muda a cor ao passar o mouse / Changes color on hover */
+    background-color: var(--fundo);
+    border-bottom: 1px solid;
+    color: var(--destaque);
 }
 
 .dropdown:hover .dropdown-content {
-    display: block; /* Exibe o conteúdo do dropdown ao passar o mouse / Displays dropdown content on hover */
+    display: block;
 }
 
 /* Rodapé / Footer */
 footer {
-    bottom: 0; /* Posiciona o rodapé na parte inferior / Positions footer at the bottom */
-    width: 100%; /* Largura total / Full width */
-    color: var(--principal); /* Cor do texto / Text color */
+    bottom: 0;
+    width: 100%;
+    color: var(--principal);
 }
 
 #footer_content {
-    background-color: var(--fundo); /* Cor de fundo do rodapé / Footer background color */
+    background-color: var(--fundo);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout responsivo / Responsive layout */
-    padding: 3rem 3.5rem; /* Espaçamento interno do rodapé / Padding inside the footer */
-    gap: 5rem; /* Espaçamento entre as colunas / Gap between columns */
-    text-align: left; /* Alinhamento do texto / Text alignment */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 3rem 3.5rem;
+    gap: 5rem;
+    text-align: left;
 }
 
 #footer_contacts h1 {
-    margin-bottom: 0.75rem; /* Margem inferior / Bottom margin */
+    margin-bottom: 0.75rem;
 }
 
 #footer_social_media {
     display: flex;
-    gap: 1rem; /* Espaçamento entre ícones de redes sociais / Gap between social media icons */
-    margin-top: 1.5rem; /* Margem superior / Top margin */
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 #footer_social_media .footer-link {
-    font-size: 1.30rem; /* Tamanho da fonte dos ícones / Icon font size */
+    font-size: 1.30rem;
     display: flex;
-    align-items: center; /* Alinha verticalmente / Vertically aligns */
-    justify-content: center; /* Centraliza horizontalmente / Horizontally centers */
+    align-items: center;
+    justify-content: center;
     width: 3rem;
     height: 3rem;
-    color: var(--principal); /* Cor dos ícones / Icon color */
-    border-radius: 50%; /* Forma circular / Circular shape */
-    transition: all 0.4s; /* Efeito de transição suave / Smooth transition effect */
+    color: var(--principal);
+    border-radius: 50%;
+    transition: all 0.4s;
 }
 
 #footer_social_media .footer-link:hover {
-    opacity: 0.8; /* Reduz a opacidade ao passar o mouse / Reduces opacity on hover */
-    color: var(--destaque); /* Muda a cor ao passar o mouse / Changes color on hover */
+    opacity: 0.8;
+    color: var(--destaque);
 }
 
 .footer-list {
     display: flex;
-    flex-direction: column; /* Organiza os itens em coluna / Arranges items in a column */
-    gap: 0.75rem; /* Espaçamento entre os itens / Gap between items */
-    list-style: none; /* Remove marcadores de lista / Removes list markers */
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
 }
 
 .footer-list .footer-link {
-    color: var(--detalhes); /* Cor dos links / Link color */
-    transition: all 0.4s; /* Efeito de transição suave / Smooth transition effect */
-    text-decoration: none; /* Remove o sublinhado / Removes underline */
+    color: var(--detalhes);
+    transition: all 0.4s;
+    text-decoration: none;
 }
 
 .footer-list .footer-link:hover {
-    color: var(--destaque); /* Muda a cor ao passar o mouse / Changes color on hover */
+    color: var(--destaque);
 }
 
 #footer_copyright {
-    background-color: var(--destaque); /* Cor de fundo / Background color */
-    color: var(--fundo); /* Cor do texto / Text color */
+    background-color: var(--destaque);
+    color: var(--fundo);
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo / Centers the content */
-    font-size: 1.1rem; /* Tamanho da fonte / Font size */
-    padding: 1.2rem; /* Espaçamento interno / Padding */
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 1.2rem;
 }
 
-#footer_copyright a:link,
-#footer_copyright a:visited {
-    color: inherit; /* Mantém a cor herdada / Keeps the inherited color */
-    text-decoration: none; /* Remove o sublinhado dos links / Removes link underline */
+#footer_copyright a:link, #footer_copyright a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 .developer {
-    font-weight: normal; /* Peso da fonte normal / Normal font weight */
-    margin-left: 5px; /* Margem esquerda / Left margin */
+    font-weight: normal;
+    margin-left: 5px;
 }
 
-/* Seções com imagens de fundo / Sections with background images */
-.bem-vindo {
-    background-image: url('../imagens/capa.jpeg'); /* Imagem de fundo específica / Specific background image */
-    background-size: cover; /* A imagem de fundo cobre toda a área / Background image covers the entire area */
-    background-position: center; /* Centraliza a imagem de fundo / Centers the background image */
-    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo / Prevents background image repetition */
-    height: 100vh; /* Altura da seção / Section height */
-    border-radius: 12px; /* Bordas arredondadas / Rounded borders */
-    box-shadow: 3px 4px 3px; /* Adiciona sombra ao contêiner / Adds shadow to the container */
+/* Efeito Parallax */
+.bem-vindo, .breve-introducao, .apoiamos, .venha-conosco, .projetos, .caixa5 {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 12px;
+    box-shadow: 3px 4px 3px;
 }
 
-.breve-introducao {
-    background-image: url('../imagens/imagem8.jpeg'); /* Imagem de fundo específica / Specific background image */
-    background-size: cover; /* A imagem de fundo cobre toda a área / Background image covers the entire area */
-    background-position: center; /* Centraliza a imagem de fundo / Centers the background image */
-    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo / Prevents background image repetition */
-    height: 100vh; /* Altura da seção / Section height */
-    border-radius: 12px; /* Bordas arredondadas / Rounded borders */
-    box-shadow: 3px 4px 3px; /* Adiciona sombra ao contêiner / Adds shadow to the container */
-}
+.bem-vindo { background-image: url(../imagens/capa.jpeg); }
+.breve-introducao { background-image: url(../imagens/imagem8.jpeg); }
+.apoiamos { background-image: url(../imagens/imagem19.jpeg); }
+.venha-conosco { background-image: url(../imagens/imagem18.jpeg); }
+.projetos { background-image: url(../imagens/projeto.jpeg); }
 
-.apoiamos {
-    background-image: url('../imagens/imagem17.jpeg'); /* Imagem de fundo específica / Specific background image */
-    background-size: cover; /* A imagem de fundo cobre toda a área / Background image covers the entire area */
-    background-position: center; /* Centraliza a imagem de fundo / Centers the background image */
-    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo / Prevents background image repetition */
-    height: 100vh; /* Altura da seção / Section height */
-    border-radius: 12px; /* Bordas arredondadas / Rounded borders */
-    box-shadow: 3px 4px 3px; /* Adiciona sombra ao contêiner / Adds shadow to the container */
-}
-
-.venha-conosco {
-    background-image: url('../imagens/imagem18.jpeg'); /* Imagem de fundo específica / Specific background image */
-    background-size: cover; /* A imagem de fundo cobre toda a área / Background image covers the entire area */
-    background-position: center; /* Centraliza a imagem de fundo / Centers the background image */
-    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo / Prevents background image repetition */
-    height: 100vh; /* Altura da seção / Section height */
-    border-radius: 12px; /* Bordas arredondadas / Rounded borders */
-    box-shadow: 3px 4px 3px; /* Adiciona sombra ao contêiner / Adds shadow to the container */
-}
-
-.projetos {
-    background-image: url('../imagens/projeto.jpeg'); /* Imagem de fundo específica / Specific background image */
-    background-size: cover; /* A imagem de fundo cobre toda a área / Background image covers the entire area */
-    background-position: center; /* Centraliza a imagem de fundo / Centers the background image */
-    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo / Prevents background image repetition */
-    height: 100vh; /* Altura da seção / Section height */
-    border-radius: 12px; /* Bordas arredondadas / Rounded borders */
-    box-shadow: 3px 4px 3px; /* Adiciona sombra ao contêiner / Adds shadow to the container */
-}
-
+/* Conteúdo Título */
 .conteudo-titulo {
     position: absolute;
-    left: 0; /* Alinha o título à esquerda / Aligns the title to the left */
-    top: 45%; /* Define a posição vertical / Sets vertical position */
-    width: 100%; /* Largura total do título / Full width of the title */
-    text-align: center; /* Centraliza o texto / Centers the text */
-    text-transform: uppercase; /* Texto em maiúsculas / Uppercase text */
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .conteudo-titulo span.titulo {
-    color: var(--fundo); /* Cor do texto / Text color */
-    background-color: var(--detalhes); /* Cor de fundo do título / Title background color */
-    padding: 10px; /* Espaçamento interno / Padding */
-    font-size: 25px; /* Tamanho da fonte / Font size */
-    letter-spacing: 5px; /* Espaçamento entre letras / Letter spacing */
-    border-radius: 12px; /* Bordas arredondadas / Rounded corners */
-    box-shadow: 0.75px 1.25px; /* Sombra ao redor do título / Shadow around the title */
+    color: var(--fundo);
+    background-color: var(--detalhes);
+    padding: 10px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    border-radius: 12px;
+    box-shadow: 0.75px 1.25px;
 }
 
+/* Conteúdo */
 .conteudo {
-    font-size: 20px; /* Tamanho da fonte / Font size */
-    padding: 0vw 5vw 0vw 5vw; /* Define o espaçamento interno / Sets inner padding */
-    text-align: justify; /* Alinhamento justificado / Justified alignment */
+    font-size: 20px;
+    padding: 0vw 5vw;
+    text-align: justify;
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna / Arranges content in a column */
-    align-items: center; /* Centraliza os itens / Centers the items */
+    flex-direction: column;
+    align-items: center;
 }
 
-.conteudo h3,
-.conteudo p {
-    max-width: 1400px; /* Largura máxima do texto / Maximum text width */
-    text-indent: 50px; /* Indenta o primeiro parágrafo / Indents the first paragraph */
+.conteudo h3, .conteudo p {
+    max-width: 1400px;
+    text-indent: 50px;
 }
 
-/* Media Queries para responsividade / Media Queries for responsiveness */
+/* Media Queries */
 @media screen and (max-width: 768px) {
     #footer_content {
-        grid-template-columns: repeat(2, 1fr); /* Ajusta o layout para 2 colunas em telas menores / Adjusts layout to 2 columns for smaller screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .swiper img {
+        width: 60vw;
+        height: 60vw;
     }
 }
 
 @media screen and (max-width: 426px) {
     #footer_content {
-        grid-template-columns: repeat(1, 1fr); /* Ajusta o layout para 1 coluna em telas muito pequenas / Adjusts layout to 1 column for very small screens */
-        padding: 3rem 2rem; /* Reduz o espaçamento interno para telas pequenas / Reduces inner padding for small screens */
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+    }
+
+    .swiper img {
+        width: 80vw;
+        height: 80vw;
     }
 }
 
 /* Imagens clicáveis com efeito de zoom */
 .zoomable-img {
-    transition: transform 0.5s ease; /* Transição suave */
-    cursor: pointer; /* Indica que a imagem pode ser clicada */
+    transition: transform 0.5s ease;
+    cursor: pointer;
     max-width: 100%;
     height: auto;
 }
 
-/* Classe de zoom ativada ao clicar */
-.zoom {
-    transform: scale(2); /* Aumenta a imagem em 2x */
+.zoomable-img:hover {
+    transform: scale(1.5);
 }
 
-/* Ajuste para dispositivos móveis */
 @media (max-width: 768px) {
-    .zoom {
-        transform: scale(1.5); /* Zoom reduzido para dispositivos móveis */
+    .zoomable-img:hover {
+        transform: scale(1.3);
     }
 }
